@@ -16,6 +16,9 @@
 		288BDDC61AF4E58900D83580 /* NetworkStatusObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDC51AF4E58900D83580 /* NetworkStatusObserverTests.m */; };
 		288BDDD21AF4E5BB00D83580 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDD11AF4E5BB00D83580 /* Reachability.m */; };
 		288BDDD51AF4E6A700D83580 /* Reachability+bpStatusDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */; };
+		288BDDD81AF4E9EB00D83580 /* NetworkStatusObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDD71AF4E9EB00D83580 /* NetworkStatusObserver.m */; };
+		288BDDDA1AF4EFF400D83580 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288BDDD91AF4EFF400D83580 /* CoreTelephony.framework */; };
+		288BDDDD1AF4FC7400D83580 /* NetworkStatus.strings in Resources */ = {isa = PBXBuildFile; fileRef = 288BDDDF1AF4FC7400D83580 /* NetworkStatus.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,11 @@
 		288BDDD11AF4E5BB00D83580 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		288BDDD31AF4E6A700D83580 /* Reachability+bpStatusDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+bpStatusDescription.h"; sourceTree = "<group>"; };
 		288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+bpStatusDescription.m"; sourceTree = "<group>"; };
+		288BDDD61AF4E9EB00D83580 /* NetworkStatusObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatusObserver.h; sourceTree = "<group>"; };
+		288BDDD71AF4E9EB00D83580 /* NetworkStatusObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusObserver.m; sourceTree = "<group>"; };
+		288BDDD91AF4EFF400D83580 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		288BDDDE1AF4FC7400D83580 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NetworkStatus.strings; sourceTree = "<group>"; };
+		288BDDE11AF4FCE100D83580 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/NetworkStatus.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BDDDA1AF4EFF400D83580 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +78,7 @@
 		288BDD9D1AF4E58900D83580 = {
 			isa = PBXGroup;
 			children = (
+				288BDDD91AF4EFF400D83580 /* CoreTelephony.framework */,
 				288BDDCF1AF4E5BB00D83580 /* Classes */,
 				288BDDA81AF4E58900D83580 /* NetworkStatusObserver */,
 				288BDDC21AF4E58900D83580 /* NetworkStatusObserverTests */,
@@ -133,6 +143,9 @@
 				288BDDD11AF4E5BB00D83580 /* Reachability.m */,
 				288BDDD31AF4E6A700D83580 /* Reachability+bpStatusDescription.h */,
 				288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */,
+				288BDDD61AF4E9EB00D83580 /* NetworkStatusObserver.h */,
+				288BDDD71AF4E9EB00D83580 /* NetworkStatusObserver.m */,
+				288BDDDF1AF4FC7400D83580 /* NetworkStatus.strings */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 288BDD9D1AF4E58900D83580;
 			productRefGroup = 288BDDA71AF4E58900D83580 /* Products */;
@@ -220,6 +234,7 @@
 				288BDDB51AF4E58900D83580 /* Main.storyboard in Resources */,
 				288BDDBA1AF4E58900D83580 /* LaunchScreen.xib in Resources */,
 				288BDDB71AF4E58900D83580 /* Images.xcassets in Resources */,
+				288BDDDD1AF4FC7400D83580 /* NetworkStatus.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288BDDD81AF4E9EB00D83580 /* NetworkStatusObserver.m in Sources */,
 				288BDDB21AF4E58900D83580 /* ViewController.m in Sources */,
 				288BDDAF1AF4E58900D83580 /* AppDelegate.m in Sources */,
 				288BDDD21AF4E5BB00D83580 /* Reachability.m in Sources */,
@@ -278,6 +294,15 @@
 				288BDDB91AF4E58900D83580 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		288BDDDF1AF4FC7400D83580 /* NetworkStatus.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				288BDDDE1AF4FC7400D83580 /* en */,
+				288BDDE11AF4FCE100D83580 /* zh-Hans */,
+			);
+			name = NetworkStatus.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -438,6 +463,7 @@
 				288BDDCB1AF4E58900D83580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		288BDDCC1AF4E58900D83580 /* Build configuration list for PBXNativeTarget "NetworkStatusObserverTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +472,7 @@
 				288BDDCE1AF4E58900D83580 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

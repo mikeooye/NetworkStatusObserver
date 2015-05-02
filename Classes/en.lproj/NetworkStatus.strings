@@ -1,0 +1,9 @@
+{
+	"network.status.none" = "Not Reachable";
+	"network.status.wifi" = "Wi-Fi";
+	"network.status.wwan" = WWAN;
+	"network.status.2g" = 2G;
+	"network.status.3g" = 3G;
+	"network.status.4g" = 4G;
+	"network.status.unknown" = "Unknown ";
+}

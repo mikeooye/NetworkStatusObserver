@@ -1,0 +1,9 @@
+{
+	"network.status.none" = "\U65e0\U7f51\U7edc";
+	"network.status.wifi" = "\U65e0\U7ebf\U5c40\U57df\U7f51\U7edc";
+	"network.status.wwan" = "\U8702\U7a9d\U79fb\U52a8\U7f51\U7edc";
+	"network.status.2g" = "2G\U7f51\U7edc";
+	"network.status.3g" = "3G\U7f51\U7edc";
+	"network.status.4g" = "4G\U7f51\U7edc";
+	"network.status.unknown" = "\U672a\U77e5\U7f51\U7edc";
+}
