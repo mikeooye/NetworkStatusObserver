@@ -24,7 +24,8 @@ extern NSString *kNetworkStatusChangedNotification;
 extern NSString *kNetworkStatusKey;
 extern NSString *kNetworkStatusDescriptionKey;
 
-@interface NetworkStatusObserver : NSObject
+
+NS_CLASS_AVAILABLE_IOS(7_0) @interface NetworkStatusObserver : NSObject
 
 @property (assign, nonatomic) BPNetworkStatus currentNetworkStatus;
 @property (strong, nonatomic) NSString *currentNetworkStatusDescription;
