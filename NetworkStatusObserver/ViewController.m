@@ -7,16 +7,27 @@
 //
 
 #import "ViewController.h"
+#import "Reachability+bpStatusDescription.h"
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
+@property (strong, nonatomic) Reachability *internetReachability;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _internetReachability = [Reachability reachabilityForInternetConnection];
+    [_internetReachability startNotifier];
+    _statusLabel.text = [_internetReachability currentReachabilityStatusDescription];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kReachabilityChangedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        
+        _statusLabel.text = [_internetReachability currentReachabilityStatusDescription];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
