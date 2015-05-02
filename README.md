@@ -1,5 +1,5 @@
 # NetworkStatusObserver
-监听网络变化
+监听网络变化(Network status changed notification: (WWAN)2G,3G,4G,Wi-Fi,Not reachable)
 
 ####Requirements
 Minimum iOS Target iOS 7
