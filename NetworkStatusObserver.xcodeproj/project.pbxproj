@@ -14,6 +14,8 @@
 		288BDDB71AF4E58900D83580 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288BDDB61AF4E58900D83580 /* Images.xcassets */; };
 		288BDDBA1AF4E58900D83580 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288BDDB81AF4E58900D83580 /* LaunchScreen.xib */; };
 		288BDDC61AF4E58900D83580 /* NetworkStatusObserverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDC51AF4E58900D83580 /* NetworkStatusObserverTests.m */; };
+		288BDDD21AF4E5BB00D83580 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDD11AF4E5BB00D83580 /* Reachability.m */; };
+		288BDDD51AF4E6A700D83580 /* Reachability+bpStatusDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		288BDDBF1AF4E58900D83580 /* NetworkStatusObserverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkStatusObserverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		288BDDC41AF4E58900D83580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288BDDC51AF4E58900D83580 /* NetworkStatusObserverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusObserverTests.m; sourceTree = "<group>"; };
+		288BDDD01AF4E5BB00D83580 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		288BDDD11AF4E5BB00D83580 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		288BDDD31AF4E6A700D83580 /* Reachability+bpStatusDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reachability+bpStatusDescription.h"; sourceTree = "<group>"; };
+		288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reachability+bpStatusDescription.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		288BDD9D1AF4E58900D83580 = {
 			isa = PBXGroup;
 			children = (
+				288BDDCF1AF4E5BB00D83580 /* Classes */,
 				288BDDA81AF4E58900D83580 /* NetworkStatusObserver */,
 				288BDDC21AF4E58900D83580 /* NetworkStatusObserverTests */,
 				288BDDA71AF4E58900D83580 /* Products */,
@@ -117,6 +124,17 @@
 				288BDDC41AF4E58900D83580 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		288BDDCF1AF4E5BB00D83580 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				288BDDD01AF4E5BB00D83580 /* Reachability.h */,
+				288BDDD11AF4E5BB00D83580 /* Reachability.m */,
+				288BDDD31AF4E6A700D83580 /* Reachability+bpStatusDescription.h */,
+				288BDDD41AF4E6A700D83580 /* Reachability+bpStatusDescription.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +239,9 @@
 			files = (
 				288BDDB21AF4E58900D83580 /* ViewController.m in Sources */,
 				288BDDAF1AF4E58900D83580 /* AppDelegate.m in Sources */,
+				288BDDD21AF4E5BB00D83580 /* Reachability.m in Sources */,
 				288BDDAC1AF4E58900D83580 /* main.m in Sources */,
+				288BDDD51AF4E6A700D83580 /* Reachability+bpStatusDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
