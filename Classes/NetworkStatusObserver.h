@@ -9,15 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "Reachability.h"
 
+
 typedef NS_ENUM(NSInteger, BPNetworkStatus) {
     
-    BPNetworkStatus_None = NotReachable,
-    BPNetworkStatus_WiFi = ReachableViaWiFi,
-    BPNetworkStatus_WWAN = ReachableViaWWAN,
-    BPNetworkStatus_2G,
-    BPNetworkStatus_3G,
-    BPNetworkStatus_4G,
-    BPNetworkStatus_Unknown,
+    BPNetworkStatus_None = NotReachable,        ///< 无网络
+    BPNetworkStatus_WiFi = ReachableViaWiFi,    ///< Wi-Fi
+    BPNetworkStatus_WWAN = ReachableViaWWAN,    ///< 蜂窝移动网络
+    BPNetworkStatus_2G,                         ///< 2G网络
+    BPNetworkStatus_3G,                         ///< 3G网络
+    BPNetworkStatus_4G,                         ///< 4G网络
+    BPNetworkStatus_Unknown,                    ///< 未知网络
 };
 
 extern NSString *kNetworkStatusChangedNotification;
