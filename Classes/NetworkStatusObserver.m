@@ -19,6 +19,7 @@ NSString *kNetworkStatusDescriptionKey = @"kNetworkStatusDescriptionKey";
     
     Reachability *_reachability;
     CTTelephonyNetworkInfo *_telephonyNetworkInfo;
+    NSString *_currentRaioAccess;
 }
 
 + (instancetype)defaultObserver
@@ -50,6 +51,7 @@ NSString *kNetworkStatusDescriptionKey = @"kNetworkStatusDescriptionKey";
     //实例化 TelephonyNetworkInfo
     if (_telephonyNetworkInfo == nil) {
         _telephonyNetworkInfo = [[CTTelephonyNetworkInfo alloc] init];
+        _currentRaioAccess = _telephonyNetworkInfo.currentRadioAccessTechnology;
     }
     
     [_reachability startNotifier];
@@ -70,6 +72,12 @@ NSString *kNetworkStatusDescriptionKey = @"kNetworkStatusDescriptionKey";
 {
     //发送通知
     
+    if (notification.name == CTRadioAccessTechnologyDidChangeNotification &&
+        notification.object != nil) {
+        
+        _currentRaioAccess = _telephonyNetworkInfo.currentRadioAccessTechnology;
+    }
+    
     NSDictionary *userInfo = @{kNetworkStatusKey:               @(self.currentNetworkStatus),
                                kNetworkStatusDescriptionKey:    self.currentNetworkStatusDescription};
     
@@ -80,7 +88,7 @@ NSString *kNetworkStatusDescriptionKey = @"kNetworkStatusDescriptionKey";
 
 - (BPNetworkStatus)currentNetworkStatus
 {
-    return [self statusWithRadioAccessTechnology:_telephonyNetworkInfo.currentRadioAccessTechnology];
+    return [self statusWithRadioAccessTechnology:_currentRaioAccess];
 }
 
 - (NSString *)currentNetworkStatusDescription
